@@ -1,16 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300&display=swap');
+
 body {
-    padding-top : 100px;
+    display : grid;
+    place-items: center;
+    min-height: 100vh;
+    
+    background: linear-gradient(#333, #000);
+    
+    font-family: 'Red Rose';
+    /* font-size: 4vw; */
 }
 div {
     margin : 0;
     padding : 5px;
-    border : 1px solid #aaa;
-    border-radius: 5px;
 }
 
 .button {
+    padding : 1rem;
+
+    background-color: #eee;
+
+    font-size: clamp(20px, 4vw, 40px);
     text-align: center;
-    background-color: #ddd;
 }
 
 .button:hover {
@@ -19,25 +30,46 @@ div {
 
 #calculator {
     margin : 0 auto;
-    width : 300px;
+    padding : 1rem;
+    width : 50vw;
+    min-width: 250px;
+    /* height : min(75vh, 300px); */
+
     display : grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-    gap : 10px;
-    background-color: #eee;
+    justify-content: space-evenly;
+    gap : 2px;
+
+    /* background-color: #000; */
+    background: linear-gradient(180deg, #000, #333);
+    border-radius: 2rem;
+}
+
+#calculator:hover {
+    outline : 5px solid #333;
+    outline-offset: 5px;
 }
 
 #content {
     grid-column-start: 1;
     grid-column-end : 5;
-    background-color : #fff;
+
+    background-color : #000;
+    background: linear-gradient(#333, #000);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    color : #fff;
+    font-size : 4vw;
     text-align : right;
 }
 
 #contentTop, #contentBottom {
-    margin : 5px 0;
-    height : 1rem;
     display : block;
+    margin : 5px 0;
+
+    min-height: 4vh;
 }
 
 #contentTop {
@@ -53,4 +85,19 @@ div {
 #equals {
     grid-column-start : 3;
     grid-column-end: 5;
+    background-color: rgba(255, 136, 0, 0.993);
+    
+    color : #000;
+}
+#equals:hover {
+    background : linear-gradient(rgba(255, 136, 0, 0.993), rgba(214, 114, 0, 0.993));
+}
+
+#divide, #multiply, #add, #subtract {
+    background-color: rgba(67, 186, 255, 0.993);
+    color : #000;
+}
+
+#divide:hover, #multiply:hover, #add:hover, #subtract:hover {
+    background : linear-gradient(rgba(67, 186, 255, 0.993), rgba(17, 133, 201, 0.993) );
 }
