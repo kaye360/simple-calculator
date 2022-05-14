@@ -24,14 +24,10 @@ function calcContent () {
     let currentContent = document.getElementById('contentTop').innerText
     let solved = eval(currentContent)
 
-    eval(currentContent)
-
     contentBottom.innerText = solved
 
 }
     
-
-            //contentBottom.innerText = 'You suck'
 
 
 // get all id's into an array
