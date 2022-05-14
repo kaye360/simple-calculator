@@ -33,7 +33,7 @@ function calcContent () {
 // get all id's into an array
 let buttons = document.getElementsByClassName('button')
 
-// loop thru array and get the name of the array
+// loop thru array and get the name of the array. Looking back, switch/case probably would have been better!
 for (let i = 0; i < buttons.length; i++) {
 
     let insertNum = buttons[i].innerText
